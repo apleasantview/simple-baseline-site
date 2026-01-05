@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ lang | default(site.defaultLanguage) }}">
+  <head>
+    <baseline-head></baseline-head>
+    <meta name="color-scheme" content="light dark">
+  </head>
+  <body>
+    <main id="main">
+      <h1>{{ title }}</h1>
+      {{ content | safe }}
+      {% if page.url !== "/" %}
+        <p><a id="go-back" href=""><span style="vertical-align: text-bottom;">&#8592;</span>&nbsp;Go back</a></p>
+      {% endif %}
+    </main>
+    <script>
+    const backBtn = document.getElementById("go-back");
+    if ( backBtn ) {
+      backBtn.addEventListener("click", (event) => {
+        event.preventDefault();
+        history.back();
+      });
+    }
+    </script>
+  </body>
+</html>
