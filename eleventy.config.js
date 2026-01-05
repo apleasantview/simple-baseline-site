@@ -1,11 +1,17 @@
 import baseline, { config as baselineConfig } from "@apleasantview/eleventy-plugin-baseline";
+import i18n from "./src/_data/i18n.js";
 
 import path from "node:path";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default function (eleventyConfig) {
-  eleventyConfig.addPlugin(baseline());
+  eleventyConfig.addPlugin(baseline({
+    multilingual: true,
+    defaultLanguage: i18n.defaultLanguage,
+    languages: i18n.languages,
+  }));
+
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
     urlPath: "/media/",
     outputDir: "./dist/media/",
