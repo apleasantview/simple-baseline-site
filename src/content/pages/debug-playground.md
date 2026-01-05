@@ -20,3 +20,6 @@ layout: "layouts/base.njk"
 
 ## Page data (json)
 <pre>{{ page | _json(2) }}</pre>
+
+<h2>Navigator snapshot (inline)</h2>
+<pre>{{ _navigator() | _inspect() }}</pre>
