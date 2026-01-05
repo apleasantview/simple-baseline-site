@@ -14,3 +14,6 @@ CSS should style this page, and JS should log to the console. Here’s a small b
 
 {% set jsPath  = _baseline.assets.input ~ "js/inline-example.js" %}
 {{ jsPath  | inlineESbuild | safe }}
+
+{% set jsPath  = _baseline.assets.input ~ "js/about/index.js" %}
+{{ jsPath  | inlineESbuild | safe }}
