@@ -1,7 +1,7 @@
 export default {
-  title: "Baseline Head Demo",
-  tagline: "Head & SEO quickstart",
-  url: process.env.URL || "http://localhost:8080/",
+  title: "Simple Baseline Site",
+  tagline: "Correct URLs across dev/preview/prod",
+  url: process.env.URL || "http://localhost:8080/", // override per env
   defaultLanguage: "en",
   noindex: false
 };
