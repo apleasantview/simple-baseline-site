@@ -1,0 +1,7 @@
+a {
+  @mixin linksMixin;
+}
+
+a:hover {
+ color: #fc35b9;
+}
