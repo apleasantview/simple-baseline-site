@@ -16,4 +16,4 @@ CSS should style this page, and JS should log to the console. Here’s a small b
 {{ jsPath  | inlineESbuild | safe }}
 
 {% set jsPath  = _baseline.assets.input ~ "js/about/index.js" %}
-{{ jsPath  | inlineESbuild | safe }}
+{{ jsPath | inlineESbuild({ minify: false, target: "es2018" }) | safe }}
