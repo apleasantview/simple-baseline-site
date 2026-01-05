@@ -19,5 +19,8 @@
     "postcss-import": "^16.1.1",
     "postcss-mixins": "^12.1.2",
     "postcss-preset-env": "^10.6.0"
+  },
+  "devDependencies": {
+    "esbuild": "0.27.2"
   }
 }
