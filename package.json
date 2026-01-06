@@ -14,11 +14,14 @@
     "@11ty/eleventy": "^3.1.2",
     "@11ty/eleventy-img": "^6.0.4",
     "@apleasantview/eleventy-plugin-baseline": "^0.1.0-next.19",
+    "cross-env": "^10.1.0",
     "cssnano": "^7.1.2",
+    "npm-run-all": "^4.1.5",
     "postcss": "^8.5.6",
     "postcss-import": "^16.1.1",
     "postcss-mixins": "^12.1.2",
-    "postcss-preset-env": "^10.6.0"
+    "postcss-preset-env": "^10.6.0",
+    "rimraf": "^6.1.2"
   },
   "devDependencies": {
     "esbuild": "0.27.2"
