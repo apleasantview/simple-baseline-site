@@ -4,8 +4,12 @@
   "description": "*In the beginning there was nothing...*",
   "type": "module",
   "scripts": {
+    "start": "npm-run-all clean dev",
+    "clean": "rimraf dist/",
     "dev": "npx @11ty/eleventy --serve",
-    "build": "npx @11ty/eleventy"
+    "build:eleventy": "cross-env ELEVENTY_ENV=production npx @11ty/eleventy",
+    "build": "npm-run-all clean build:*",
+    "dryrun": "npx @11ty/eleventy --dryrun"
   },
   "keywords": [],
   "author": "",
